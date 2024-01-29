@@ -1,0 +1,42 @@
+.bigBox {
+  width: 25%;
+  background-color: green;
+  height: 75%;
+  background: url(../assets/weather-bg.png);
+  background-size: cover;
+  overflow: hidden;
+  min-width: 250px;
+}
+.secondBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 10%;
+}
+.mainHead {
+  font-size: 40px;
+  color: white;
+  margin-bottom: 1px;
+}
+
+.todayDate {
+  margin-top: 0px;
+  color: white;
+}
+
+.informationCity {
+  background: rgba(3, 150, 255, 0.4);
+  color: white;
+  top: 20px;
+  position: relative;
+  padding: 20px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+input {
+  margin-top: 20px;
+  font-size: 20px;
+}
