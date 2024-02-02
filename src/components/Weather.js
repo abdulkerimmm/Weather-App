@@ -9,7 +9,7 @@ function Weather() {
   const [isShow, setIsShow] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
 
-  const iconURL = "http://openweathermap.org/img/w/";
+  const iconURL = "https://openweathermap.org/img/w/";
   const api = {
     url: "https://api.openweathermap.org/data/2.5/",
     key: "28fd15358cdecbc1a1dfef367e71acef",
