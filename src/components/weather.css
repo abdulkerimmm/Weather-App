@@ -2,8 +2,8 @@
   width: 25%;
   background-color: green;
   height: 75%;
-  background: url(../assets/weather-bg.png);
-  background-size: cover;
+  /* background: url(../assets/weather-bg.png);
+  background-size: cover; */
   overflow: hidden;
   min-width: 250px;
 }

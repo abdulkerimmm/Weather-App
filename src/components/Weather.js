@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./weather.css";
+import rain from "../assets/weather-bg.png";
+import clouds from "../assets/clouds.jpg";
+import clear from "../assets/clear.png";
+import haze from "../assets/haze.jpg";
+import snow from "../assets/snow.jpg";
+import sunny from "../assets/sunny.jpg";
 
 function Weather() {
   const todayDate = new Date();
@@ -8,6 +14,7 @@ function Weather() {
   const [erorMsg, setErrorMsg] = useState("");
   const [isShow, setIsShow] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
+  const [backImage, setBackImage] = useState(rain);
 
   const iconURL = "https://openweathermap.org/img/w/";
   const api = {
@@ -37,6 +44,21 @@ function Weather() {
         })
         .then((data) => {
           setWeather(data);
+          if (data.weather[0].main === "Clear") {
+            setBackImage(clear);
+          } else if (data.weather[0].main === "Clouds") {
+            setBackImage(clouds);
+          } else if (data.weather[0].main === "Rain") {
+            setBackImage(rain);
+          } else if (data.weather[0].main === "Haze") {
+            setBackImage(haze);
+          } else if (data.weather[0].main === "Snow") {
+            setBackImage(snow);
+          } else if (data.weather[0].main === "Sunny") {
+            setBackImage(sunny);
+          } else {
+            setBackImage(rain);
+          }
           setInput("");
           setIsShow(false);
           setIsLoading(false);
@@ -45,8 +67,12 @@ function Weather() {
         .catch((err) => console.log(err));
     }
   };
+
   return (
-    <div className="bigBox">
+    <div
+      className="bigBox"
+      style={{ background: `url(${backImage})`, backgroundSize: "cover" }}
+    >
       <div className="secondBox">
         <h1 className="mainHead">Wheather App</h1>
         <p className="todayDate">{todayDate.toLocaleDateString()}</p>
