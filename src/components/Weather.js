@@ -11,7 +11,7 @@ function Weather() {
 
   const iconURL = "http://openweathermap.org/img/w/";
   const api = {
-    url: "http://api.openweathermap.org/data/2.5/",
+    url: "https://api.openweathermap.org/data/2.5/",
     key: "28fd15358cdecbc1a1dfef367e71acef",
   };
 
