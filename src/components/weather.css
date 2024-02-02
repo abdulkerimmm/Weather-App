@@ -20,6 +20,11 @@
   color: white;
   margin-bottom: 1px;
 }
+input {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+}
 
 .todayDate {
   margin-top: 0px;

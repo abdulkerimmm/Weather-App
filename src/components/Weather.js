@@ -50,12 +50,14 @@ function Weather() {
       <div className="secondBox">
         <h1 className="mainHead">Wheather App</h1>
         <p className="todayDate">{todayDate.toLocaleDateString()}</p>
+
         <input
           onKeyPress={getWeatherInfo}
           onChange={getInput}
           value={input}
           placeholder="Search City Name"
         />
+
         {isShow ? (
           <p style={{ color: "white" }}>{erorMsg}</p>
         ) : (
