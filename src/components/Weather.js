@@ -50,7 +50,10 @@ function Weather() {
             setBackImage(clouds);
           } else if (data.weather[0].main === "Rain") {
             setBackImage(rain);
-          } else if (data.weather[0].main === "Haze") {
+          } else if (
+            data.weather[0].main === "Haze" ||
+            data.weather[0].main === "Mist"
+          ) {
             setBackImage(haze);
           } else if (data.weather[0].main === "Snow") {
             setBackImage(snow);
